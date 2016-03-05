@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Diagnostics.Contracts;
 
-namespace CodeContractsLSP
+namespace LSP
 {
     public class Wine : DrinkableFluid
     {
         public override void Drink(Person person, double ml)
         {
-            Contract.Requires(person.Age >= Consts.AgeOfMajority);
+            if (person.Age < Consts.AgeOfMajority)
+            {
+                throw new ArgumentException("Person is too young to drink");
+            }
             person.Calories += Convert.ToInt32(ml * 0.85);
         }
     }

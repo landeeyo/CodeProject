@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics.Contracts;
 
-namespace CodeContractsLSP
+namespace LSP
 {
     public class Sprite : DrinkableFluid
     {

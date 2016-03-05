@@ -2,9 +2,9 @@
 
 namespace CodeContractsLSP
 {
-    public abstract class Fluid
+    public abstract class DrinkableFluid
     {
-        protected virtual void Drink(Person person, double ml)
+        public virtual void Drink(Person person, double ml)
         {
             Contract.Requires(person != null);
             Contract.Requires(ml >= 0);
