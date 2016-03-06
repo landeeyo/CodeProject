@@ -1,14 +1,10 @@
-﻿using System;
-using System.Diagnostics.Contracts;
-
-namespace CodeContractsLSP
+﻿namespace CodeContractsLSP
 {
-    public class Wine : DrinkableFluid
+    public class Wine : Alcohol
     {
-        public override void Drink(Person person, double ml)
+        public Wine()
         {
-            Contract.Requires(person.Age >= Consts.AgeOfMajority);
-            person.Calories += Convert.ToInt32(ml * 0.85);
+            this.CaloriesPerMl = 0.85;
         }
     }
 }

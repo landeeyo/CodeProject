@@ -1,17 +1,10 @@
-﻿using System;
-using System.Diagnostics.Contracts;
-
-namespace LSP
+﻿namespace LSP
 {
-    public class Wine : DrinkableFluid
+    public class Wine : Alcohol
     {
-        public override void Drink(Person person, double ml)
+        public Wine()
         {
-            if (person.Age < Consts.AgeOfMajority)
-            {
-                throw new ArgumentException("Person is too young to drink");
-            }
-            person.Calories += Convert.ToInt32(ml * 0.85);
+            this.CaloriesPerMl = 0.85;
         }
     }
 }

@@ -1,13 +1,10 @@
-﻿using System;
-using System.Diagnostics.Contracts;
-
-namespace LSP
+﻿namespace LSP
 {
     public class Sprite : DrinkableFluid
     {
-        public override void Drink(Person person, double ml)
+        public Sprite()
         {
-            person.Calories += Convert.ToInt32(ml * 0.27);
+            this.CaloriesPerMl = 0.27;
         }
     }
 }

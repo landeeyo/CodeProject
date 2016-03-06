@@ -1,11 +1,7 @@
-﻿using System.Diagnostics.Contracts;
-
-namespace LSP
+﻿namespace LSP
 {
     public abstract class DrinkableFluid
     {
-        public virtual void Drink(Person person, double ml)
-        {
-        }
+        public double CaloriesPerMl;
     }
 }
