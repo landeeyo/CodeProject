@@ -6,7 +6,7 @@ namespace LSP
     {
         public int Age { get; set; }
 
-        public int Calories { get; set; }
+        public int ConsumedCalories { get; set; }
 
         public Human(int age)
         {
@@ -27,7 +27,7 @@ namespace LSP
             {
                 throw new ArgumentException("Can't drink less than 0 ml of fluid");
             }
-            this.Calories += Convert.ToInt32(ml * fluid.CaloriesPerMl);
+            this.ConsumedCalories += Convert.ToInt32(ml * fluid.CaloriesPerMl);
         }
     }
 }

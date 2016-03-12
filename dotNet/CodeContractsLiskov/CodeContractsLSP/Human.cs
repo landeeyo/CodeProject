@@ -7,7 +7,7 @@ namespace CodeContractsLSP
     {
         public int Age { get; set; }
 
-        public int Calories { get; set; }
+        public int ConsumedCalories { get; set; }
 
         public Human(int age)
         {
@@ -20,7 +20,7 @@ namespace CodeContractsLSP
         {
             Contract.Requires(fluid != null);
             Contract.Requires(ml > 0);
-            this.Calories += Convert.ToInt32(ml * fluid.CaloriesPerMl);
+            this.ConsumedCalories += Convert.ToInt32(ml * fluid.CaloriesPerMl);
         }
     }
 }

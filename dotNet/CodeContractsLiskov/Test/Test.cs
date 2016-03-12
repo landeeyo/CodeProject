@@ -8,9 +8,9 @@ namespace Test
         [Fact]
         public void Oops()
         {
-Person person = new Person(17);
-DrinkableFluid fluid = new Wine();
-fluid.Drink(person, 750);
+            Human human = new Child(10);
+            DrinkableFluid fluid = new Wine();
+            human.Drink(fluid, 750);
         }
     }
 }

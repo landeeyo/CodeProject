@@ -16,7 +16,7 @@ namespace CodeContractsLSP
         public override void Drink(DrinkableFluid fluid, int ml)
         {
             Contract.Requires(!fluid.GetType().IsAssignableFrom(typeof(Alcohol)));
-            this.Calories += Convert.ToInt32(ml * fluid.CaloriesPerMl);
+            this.ConsumedCalories += Convert.ToInt32(ml * fluid.CaloriesPerMl);
         }
     }
 }

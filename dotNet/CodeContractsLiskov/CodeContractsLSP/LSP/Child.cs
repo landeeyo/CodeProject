@@ -20,7 +20,7 @@ namespace LSP
             {
                 throw new ArgumentException("Children can't drink alcohol");
             }
-            this.Calories += Convert.ToInt32(ml * fluid.CaloriesPerMl);
+            this.ConsumedCalories += Convert.ToInt32(ml * fluid.CaloriesPerMl);
         }
     }
 }
